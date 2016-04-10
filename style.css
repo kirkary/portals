@@ -1,0 +1,152 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+html{
+height:100%;
+min-height:100%;
+width:100%;
+}
+
+body{
+height: 100%;
+min-height:100%;
+width:100%;
+position: relative;
+background-image: url('img/topBg.jpg');
+background-color: rgb(14, 19, 31);
+background-repeat-y: no-repeat;
+}
+
+.section{
+    text-align: center;
+}
+
+.section.head{
+    min-height: 100%;
+    height:100%;
+}
+
+.section.head .container{
+    height:100%;
+}
+
+h1,h2,h3{
+    color:#f6f7fa;
+    font-family: "CaviarDreams";
+}
+
+.head h1{
+    padding-top: 120px;
+    font-size: 12.0rem;
+}
+
+.head a
+{
+    position: relative;
+    z-index: 10;
+}
+
+.head .storebutton
+{
+    margin: 0 65px;
+}
+
+ #headGreen{
+    position: relative;
+    margin: 0 auto;
+    height: 242px;
+    width: 484px;
+    bottom: 60px;
+}
+#headGreen .body
+{
+    position: absolute;
+    background-image: url(img/green.png);
+    height: 414px;
+    width: 484px;
+    transform: scale(0.5); 
+}
+
+#headGreen .lens
+{
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    background-image: url(img/green.png);
+    height: 195px;
+    width: 298px;
+    background-position: 298px 0;
+    z-index: 5;
+}
+
+#headGreen .eyeCont{
+    position: absolute;
+    height: 36px;
+    width: 36px;
+}
+
+#headGreen .eyeCont.l{
+    top: 46%;
+    left: 34%;
+}
+
+#headGreen .eyeCont.r
+{    
+    top: 46%;
+    right: 31%;
+}
+
+#headGreen .eye
+{
+    position: absolute;
+    background-image: url(img/green.png);
+    height: 36px;
+    width: 36px;
+    background-position: 0 36px;
+}
+
+.trailerWrapper
+{
+    margin: 0 auto;
+    width: 250px;
+    height: 508px;
+    background-image: url('img/phoneFrameW.png');
+    background-size: contain;
+    /*padding: 12.5% 6.66% 11.2% 6.66%;*/
+    background-repeat: no-repeat;
+}
+
+.trailerWrapper iframe
+{
+    padding: 23.5% 3.66% 6.2% 3.66%;
+}
+
+/*#headGreen .eye.l
+{
+    margin-top: 12%;
+    margin-left: 11%;
+}
+
+#headGreen .eye.r
+{
+    margin-top: 12%;
+    margin-left: 20%;
+}*/
+
+@font-face {
+    font-family: CaviarDreams;
+    src: url(fonts/CaviarDreams-webfont.ttf);
+}
