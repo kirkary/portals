@@ -50,12 +50,17 @@ h1,h2,h3{
 
 .head h1{
     padding-top: 120px;
-    font-size: 12.0rem;
+    font-size: 120px;
+}
+
+.head h3{
+    font-size: 36px;
 }
 
 .head a
 {
     position: relative;
+    text-decoration: none;
     z-index: 10;
 }
 
@@ -133,6 +138,91 @@ h1,h2,h3{
 {
     padding: 23.5% 3.66% 6.2% 3.66%;
 }
+
+.ast{
+    position: absolute;
+    width:112px;
+    height: 112px;
+    background-repeat: no-repeat;
+}
+
+.ast.ast1
+{
+    top:80px;
+    left:80px;
+    background-image: url('img/ast1.png');
+    animation:rotate 20s linear reverse infinite;
+}
+.ast.ast2
+{
+    top: 40px;
+    right: 30px;
+    background-image: url('img/ast2.png');
+    animation:rotate 50s linear reverse infinite;
+}
+.ast.ast3
+{
+    top:210px;
+    left:160px;
+    background-image: url('img/ast3.png');
+    animation:rotate 40s linear reverse infinite;
+}
+.ast.ast4
+{ 
+    width: 180px;
+    height: 180px;
+    top: 250px;
+    right: 70px;
+    background-image: url('img/ast4.png');
+    background-size: contain;
+    animation: rotate 70s linear reverse infinite;
+}
+
+.ast.ast4 .blue
+{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    left: -60%;
+    transform-origin: 120% center;
+    animation: rotate 20s linear infinite;
+}
+
+.ast.ast4 .blue:before
+{ 
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url('img/blue.png');
+    background-position: 0;
+    background-size: cover;
+    animation: rotate 10s linear reverse infinite, blueSize 20s linear reverse infinite;
+}
+
+@keyframes rotate { 100% { transform:rotate(-360deg); } }
+@keyframes blueSize {   
+     0% { transform:scale(1.0); }   
+     25% { transform:scale(0.9); }  
+     50% { transform:scale(0.8); } 
+     75% { transform:scale(0.9); }      
+     100% { transform:scale(1.0); } 
+     }
+
+/*.shipAppears
+{
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    margin: 60px 0;
+    max-width: 100%;
+}
+
+.shipAppears .ship
+{
+    position: absolute;
+    right: 500px;
+}*/
 
 /*#headGreen .eye.l
 {
