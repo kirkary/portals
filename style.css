@@ -27,7 +27,7 @@ width:100%;
 position: relative;
 background-image: url('img/topBg.jpg');
 background-color: rgb(14, 19, 31);
-background-repeat-y: no-repeat;
+background-repeat:repeat no-repeat;
 }
 
 .section{
