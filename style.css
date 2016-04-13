@@ -196,6 +196,7 @@ h1,h2,h3{
     left: -60%;
     transform-origin: 120% center;
     animation: rotate 20s linear infinite;
+    z-index: 1000;
 }
 
 .ast.ast4 .blue:before
