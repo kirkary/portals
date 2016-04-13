@@ -215,6 +215,19 @@ h1,h2,h3{
      100% { transform:scale(1.0); } 
      }
 
+/* Larger than mobile */
+@media (min-width: 400px) {
+    .ast.ast4
+{ 
+    transform: scale(0.5);
+}
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+    
+}
+
 /*.shipAppears
 {
     overflow: hidden;
