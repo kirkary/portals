@@ -208,6 +208,7 @@ h1,h2,h3{
     background-position: 0;
     background-size: cover;
     animation: rotate 10s linear reverse infinite, blueSize 20s linear reverse infinite;
+    z-index: 1000;
 }
 
 .screenshot
