@@ -124,6 +124,10 @@ h1,h2,h3{
     background-position: 0 36px;
 }
 
+.section.trailer
+{
+    margin: 0 0 200px 0;
+}
 .container.trailer
 {
     overflow: hidden;
@@ -206,6 +210,31 @@ h1,h2,h3{
     animation: rotate 10s linear reverse infinite, blueSize 20s linear reverse infinite;
 }
 
+.screenshot
+{
+    height: 300px;
+}
+
+.screenshot img
+{
+    height: 100%;
+    width:auto;
+    margin: 0 auto;
+}
+
+.screenshot img.transition {
+    -webkit-transform: scale(1.6); 
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+}
+.screenshot img {
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+}
+
 @keyframes rotate { 100% { transform:rotate(-360deg); } }
 @keyframes blueSize {   
      0% { transform:scale(1.0); }   
@@ -218,15 +247,34 @@ h1,h2,h3{
 /* Larger than mobile */
 @media (min-width: 400px) {
     .ast.ast4
-{ 
-    transform: scale(0.5);
-}
+    { 
+        transform: scale(0.5);
+    }
 }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
+    .ast.ast4
+    { 
+        transform: scale(0.5);
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    
+    .ast.ast4
+    { 
+        transform: scale(0.5);
+    }
     
 }
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
 
 /*.shipAppears
 {
