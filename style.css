@@ -70,19 +70,20 @@ h1,h2,h3{
 }
 
  #headGreen{
-    position: relative;
-    margin: 0 auto;
-    height: 242px;
-    width: 484px;
-    bottom: 60px;
+    position: absolute;
+    height: 245px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
 }
 #headGreen .body
 {
-    position: absolute;
-    background-image: url(img/green.png);
+    position: relative;
+    margin: 0 auto;
     height: 414px;
     width: 484px;
-    transform: scale(0.5); 
+    background-image: url(img/green.png);
+    transform: scale(0.5);
 }
 
 #headGreen .lens
@@ -123,6 +124,11 @@ h1,h2,h3{
     background-position: 0 36px;
 }
 
+.container.trailer
+{
+    overflow: hidden;
+}
+
 .trailerWrapper
 {
     margin: 0 auto;
@@ -149,7 +155,7 @@ h1,h2,h3{
 .ast.ast1
 {
     top:80px;
-    left:80px;
+    left: 0px;
     background-image: url('img/ast1.png');
     animation:rotate 20s linear reverse infinite;
 }
