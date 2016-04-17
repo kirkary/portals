@@ -34,6 +34,10 @@ background-repeat:repeat no-repeat;
     text-align: center;
 }
 
+.section .container.trailer{
+    min-width: 960px;
+}
+
 .section.head{
     min-height: 100%;
     height:100%;
@@ -124,9 +128,9 @@ h1,h2,h3{
     background-position: 0 36px;
 }
 
-.section.trailer
+.section.trailer, .section.screenshots
 {
-    margin: 0 0 200px 0;
+    height: 100%;
 }
 .container.trailer
 {
@@ -136,8 +140,8 @@ h1,h2,h3{
 .trailerWrapper
 {
     margin: 0 auto;
-    width: 250px;
-    height: 508px;
+    width: 260px;
+    height: 530px;
     background-image: url('img/phoneFrameW.png');
     background-size: contain;
     /*padding: 12.5% 6.66% 11.2% 6.66%;*/
@@ -146,7 +150,7 @@ h1,h2,h3{
 
 .trailerWrapper iframe
 {
-    padding: 23.5% 3.66% 6.2% 3.66%;
+     padding: 25.5% 3.66% 6.2% 3.66%;
 }
 
 .ast{
@@ -196,7 +200,6 @@ h1,h2,h3{
     left: -60%;
     transform-origin: 120% center;
     animation: rotate 20s linear infinite;
-    z-index: 1000;
 }
 
 .ast.ast4 .blue:before
@@ -209,7 +212,6 @@ h1,h2,h3{
     background-position: 0;
     background-size: cover;
     animation: rotate 10s linear reverse infinite, blueSize 20s linear reverse infinite;
-    z-index: 1000;
 }
 
 .screenshot
@@ -235,6 +237,21 @@ h1,h2,h3{
 	-moz-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
 	-ms-transition: all .4s ease-in-out;
+}
+
+.section.footer{
+    color:#fcfcfc;
+}
+
+.section.footer a{    
+    text-decoration: none;
+    padding: 0 10px;
+    color: #fcfcfc;
+}
+
+.section.footer a:hover
+{
+    color:#4BC545;
 }
 
 @keyframes rotate { 100% { transform:rotate(-360deg); } }
@@ -265,10 +282,6 @@ h1,h2,h3{
 /* Larger than tablet */
 @media (min-width: 750px) {
     
-    .ast.ast4
-    { 
-        transform: scale(0.5);
-    }
     
 }
 
