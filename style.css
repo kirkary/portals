@@ -269,6 +269,12 @@ h1,h2,h3{
     { 
         transform: scale(0.5);
     }
+    
+    .trailerWrapper
+    {        
+        width: 319px;
+        height: 650px;
+    }
 }
 
 /* Larger than phablet */
@@ -277,12 +283,18 @@ h1,h2,h3{
     { 
         transform: scale(0.5);
     }
+    
+    .trailerWrapper
+    {        
+        width: 319px;
+        height: 650px;
+    }
+    
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-    
-    
+        
 }
 
 /* Larger than desktop */
