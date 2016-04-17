@@ -265,31 +265,46 @@ h1,h2,h3{
 
 /* Larger than mobile */
 @media (min-width: 400px) and (orientation:portrait) {
-    .ast.ast4
-    { 
-        transform: scale(0.5);
-    }
-    
-    .trailerWrapper
-    {        
-        width: 422.9px;
-        height: 860px;
-    }
+.ast.ast4
+{ 
+    transform: scale(0.5);
+}
+
+.trailerWrapper
+{        
+    width: 422.9px;
+    height: 860px;
+}
+
+.section.head{
+min-height: 820px;
+}
+
+.section.head .container{
+    min-height: 820px;
+}    
 }
 
 /* Larger than phablet */
 @media (min-width: 550px) and (orientation:portrait) {
-    .ast.ast4
-    { 
-        transform: scale(0.5);
-    }
-    
-    .trailerWrapper
-    {        
-        width: 422.9px;
-        height: 860px;
-    }
-    
+.ast.ast4
+{ 
+    transform: scale(0.5);
+}
+
+.trailerWrapper
+{        
+    width: 422.9px;
+    height: 860px;
+}
+
+.section.head{
+min-height: 820px;
+}
+
+.section.head .container{
+min-height: 820px;
+}    
 }
 
 @media (min-width: 400px) and (orientation:landscape) {
@@ -337,16 +352,23 @@ font-size: 100px;
 
 /* Larger than tablet */
 @media (min-width: 750px) and (orientation:portrait) {
-    .ast.ast4
-    { 
-        transform: scale(0.5);
-    }
-    
-    .trailerWrapper
-    {        
-        width: 422.9px;
-        height: 860px;
-    }
+.ast.ast4
+{ 
+    transform: scale(0.5);
+}
+
+.trailerWrapper
+{        
+    width: 422.9px;
+    height: 860px;
+}
+.section.head{
+min-height: 820px;
+}
+
+.section.head .container{
+min-height: 820px;
+}
 }
 
 @media (min-width: 750px) and (orientation:landscape) {
