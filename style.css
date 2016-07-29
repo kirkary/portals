@@ -25,8 +25,9 @@ height: 100%;
 min-height:100%;
 width:100%;
 position: relative;
-background-image: url('img/topBg.jpg');
-background-color: rgb(14, 19, 31);
+background-image: url('img/space_dn2.png');
+background-size: cover;
+background-color: rgb(0, 0, 0);
 background-repeat:repeat no-repeat;
 }
 
@@ -140,8 +141,9 @@ h1,h2,h3{
 
  .section.screenshots{
      margin: 0 0 100px 0;
+    
  }
-
+ 
 .trailerWrapper
 {
     margin: 0 auto;
@@ -226,22 +228,52 @@ h1,h2,h3{
 
 .screenshot img
 {
-    height: 100%;
+    height: 450px;
     width:auto;
     margin: 0 auto;
+    border: 10px solid #e9e9e9;
+}
+
+.screenshots .container .row:nth-child(odd) .screenshot img-wrapp{
+    /*float: left;
+    margin-left: 100px;*/
+}
+
+.screenshots .container .row:nth-child(even) .screenshot img-wrapp{ 
+    /*float: right;
+    margin-top: 350px;*/
+    /*margin-right: 100px;*/
 }
 
 .screenshot img.transition {
-    -webkit-transform: scale(1.6); 
-    -moz-transform: scale(1.6);
-    -o-transform: scale(1.6);
-    transform: scale(1.6);
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 .screenshot img {
 	-webkit-transition: all .4s ease-in-out;
 	-moz-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
 	-ms-transition: all .4s ease-in-out;
+}
+
+.screenshot .desc{
+    display: table;
+    /*float: left;*/
+    height:470px;
+    /*max-width:420px;
+    margin-left: 40px;*/
+    text-align: center;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.screenshot .desc .desc-text{
+    display: table-cell;
+    vertical-align: middle;
+    font-family: PaytoneOne;
+    font-size: 36px;
 }
 
 .section.footer{
@@ -395,11 +427,12 @@ min-height: 820px;
 }
 }
 
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1920px) {
+    .head h1 {
+    padding-top: 175px;
+    }
+}
 
 /*.shipAppears
 {
@@ -431,4 +464,9 @@ min-height: 820px;
 @font-face {
     font-family: CaviarDreams;
     src: url(fonts/CaviarDreams-webfont.ttf);
+}
+
+@font-face{
+    font-family: PaytoneOne;
+    src: url(fonts/PaytoneOne.ttf);    
 }
