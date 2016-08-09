@@ -35,8 +35,23 @@ background-repeat:repeat no-repeat;
     text-align: center;
 }
 
-.section .container.trailer{
-    /*min-width: 420px;*/
+.redContainer{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2321px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.red{
+  display: block;
+  position: absolute;
+  width: 122px;
+  height: 120px;
+  background-image: url('img/red.png');
+  background-size: cover;
 }
 
 .section.head{
@@ -58,6 +73,10 @@ h1,h2,h3{
     font-size: 120px;
 }
 
+.head h2{
+    font-size: 30px;
+}
+
 .head h3{
     margin-bottom: 35px;
     font-size: 36px;
@@ -73,6 +92,8 @@ h1,h2,h3{
 .head .storebutton
 {
     margin: 0 65px;
+    -webkit-filter: grayscale(20%); /* Chrome, Safari, Opera */
+    filter: grayscale(20%);
 }
 
  #headGreen{
@@ -139,9 +160,16 @@ h1,h2,h3{
     overflow: hidden;
 }
 
+.section.description{
+    text-align: center;
+    font-family: "CaviarDreams";    
+    font-size: 3.4rem;
+    color:#fff;
+}
+
  .section.screenshots{
-     height:500px;
-     margin: 0 0 100px 0;    
+     /*height:500px;*/
+     margin: 100px 0;    
  }
  
 .trailerWrapper
@@ -243,6 +271,7 @@ h1,h2,h3{
     text-align: center;
     text-transform: uppercase;
     font-size:16px;
+    font-family: "CaviarDreams";    
     color:#fff;
 }
 
@@ -295,7 +324,67 @@ h1,h2,h3{
 }
 
 .section.footer{
-    color:#fcfcfc;
+    position: relative;
+    color: #fcfcfc;
+}
+
+.section.footer::after{
+    content: "";
+    background-image: url('img/b.jpg');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.section.footer h4{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    margin: 0;
+    background-color: rgba(11, 86, 174, 0.3); /*rgba(6, 10, 45,0.8);*/
+    background-position-y: 3px;
+    background-repeat-y: no-repeat;
+}
+
+.section.footer .bhWrapper{
+    position: relative;
+    overflow: hidden;
+    /* left: 50%; */
+    height: 256px;
+    text-align: center;
+    /*background-image: url('img/Capture_.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -128px;
+    z-index: 2;*/
+}
+
+.section.footer .bhWrapper img{
+    position: absolute;    
+    left:0;
+    right:0;
+    margin: 0 auto;
+    /*
+    opacity:0.7;
+    filter:alpha(opacity=70);*/
+}
+
+.section.footer .bhWrapper img.circle
+{
+    height: 512px;
+    bottom: -256px;
+    z-index: 0;
+}
+
+.section.footer .bhWrapper img.bh{
+    height: 340px;
+    bottom: -170px;
+    animation: rotate 30s linear infinite;
 }
 
 .section.footer a{    
