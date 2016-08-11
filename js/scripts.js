@@ -162,7 +162,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
     
-var _containerHeight = 2321;
+var _containerHeight = 2565;
 var _width, _height, _scrollHeight;
 var letters = document.getElementsByTagName('span');
 var _movingElements = [];
@@ -174,24 +174,42 @@ var _cssPrefix = pre.css;
 var _positions = [
   {
     name: 'red',
-    rotation: 110,
+    rotation: 115,
     stage: 0,
-    start: [
+    start:
         {
         percent: 0, x: 0, y: 0
         },
+    end:
         {
-        percent: 1, x: 3, y: 0.9
+        percent: 0.3, x: 1.1, y: 0.26
         }
-    ],
-    end: [
+  },
+  {
+    name: 'red_1',
+    rotation: -110,
+    stage: 0,
+    start:
         {
-        percent: 1, x: 3, y: 0.9
+        percent: 0.3, x: 1, y: 0.3
         },
+    end:
         {
-        percent: 1, x: -3, y: 0.9
+        percent: 0.6, x: 0.45, y: 0.45
+        }
+  },
+  {
+    name: 'red_2',
+    rotation: 180,
+    stage: 0,
+    start:
+        {
+        percent: 0.6, x: 0.463, y: 0.45
         },
-    ]
+    end:
+        {
+        percent: 1, x: 0.463, y: 1.2
+        }
   }
 ]
 
@@ -201,10 +219,12 @@ initMovingElements();
 function initMovingElements() {
   for (var i = 0; i < _positions.length; i++) {
     _positions[i].diff = {
-      percent: _positions[i].end[0].percent - _positions[i].start[0].percent,
-      x: _positions[i].end[0].x - _positions[i].start[0].x,
-      y: _positions[i].end[0].y - _positions[i].start[0].y,
+      percent: _positions[i].end.percent - _positions[i].start.percent,
+      x: _positions[i].end.x - _positions[i].start.x,
+      y: _positions[i].end.y - _positions[i].start.y,
     }
+    _positions[i].target = {};
+    _positions[i].current = {};
     var el = document.getElementsByClassName(_positions[i].name)[0];
     _movingElements.push(el);
   }
@@ -215,20 +235,52 @@ function resize() {
   _height = window.innerHeight;
   _scrollHeight = _containerHeight-_height;
 }
-
+/*
 function updateElements() {
   for (var i = 0; i < _movingElements.length; i++) {
     var p = _positions[i];
     if(_scrollPercent <= p.start[p.stage].percent) {
       _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.start[p.stage].x*_width)+'px, '+(p.start[p.stage].y*_containerHeight)+'px, 0px) rotate('+p.rotation+'deg)';
-    } else if(_scrollPercent >= p.end.percent) {
-      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.end.x*_width)+'px, '+(p.end.y*_containerHeight)+'px, 0px) rotate('+p.rotation+'deg)';
-      if(p.stage+1 <= p.start.length)
-        p.stage++;
+    } else if(_scrollPercent >= p.end[p.stage].percent) {
+      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.end[p.stage].x*_width)+'px, '+(p.end[p.stage].y*_containerHeight)+'px, 0px) rotate('+p.rotation+'deg)';
+      if(p.stage+1 < p.start.length)
+      {
+        p.stage++;   
+        console.log(p.start[p.stage]);
+        console.log(p.end[p.stage]);       
+      }
+
     } else {
       _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.start[p.stage].x*_width + (p.diff.x*(_scrollPercent-p.start[p.stage].percent)/p.diff.percent*_width))+'px, '+
         (p.start[p.stage].y*_containerHeight + (p.diff.y*(_scrollPercent-p.start[p.stage].percent)/p.diff.percent*_containerHeight))+'px, 0px) rotate('+p.rotation+'deg)';
     }
+  }
+}*/
+
+function updateElements() {
+  for (var i = 0; i < _movingElements.length; i++) {
+    var p = _positions[i];
+    if(_scrollPercent <= p.start.percent) {
+      p.target.x = p.start.x*_width;
+      p.target.y = p.start.y*_containerHeight;
+    } else if(_scrollPercent >= p.end.percent) {
+      p.target.x = p.end.x*_width;
+      p.target.y = p.end.y*_containerHeight;
+    } else {
+      p.target.x = p.start.x*_width + (p.diff.x*(_scrollPercent-p.start.percent)/p.diff.percent*_width);
+      p.target.y = p.start.y*_containerHeight + (p.diff.y*(_scrollPercent-p.start.percent)/p.diff.percent*_containerHeight);
+    }
+    
+    // lerp
+    if(!p.current.x) {
+      p.current.x = p.target.x;
+      p.current.y = p.target.y;
+    } else {
+      p.current.x = p.current.x + (p.target.x - p.current.x)*0.1;
+      p.current.y = p.current.y + (p.target.y - p.current.y)*0.1;
+    }
+    _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+p.current.x+'px, '+
+        p.current.y+'px, 0px) rotate('+p.rotation+'deg)';
   }
 }
 
