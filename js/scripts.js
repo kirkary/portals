@@ -161,8 +161,10 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 };
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
-    
-var _containerHeight = 2565;
+
+//MOVE ELEMENTS
+var _containerHeight = $( document ).height();
+$('.redContainer').height($( document ).height());
 var _width, _height, _scrollHeight;
 var letters = document.getElementsByTagName('span');
 var _movingElements = [];
@@ -182,7 +184,7 @@ var _positions = [
         },
     end:
         {
-        percent: 0.3, x: 1.1, y: 0.26
+        percent: 0.3, x: 1.2, y: 0.26
         }
   },
   {
@@ -191,11 +193,11 @@ var _positions = [
     stage: 0,
     start:
         {
-        percent: 0.3, x: 1, y: 0.3
+        percent: 0.3, x: 1.2, y: 0.3
         },
     end:
         {
-        percent: 0.6, x: 0.45, y: 0.45
+        percent: 0.5, x: 0.45, y: 0.45
         }
   },
   {
@@ -204,7 +206,7 @@ var _positions = [
     stage: 0,
     start:
         {
-        percent: 0.6, x: 0.463, y: 0.45
+        percent: 0.6, x: 0.463, y: 0.4
         },
     end:
         {
@@ -231,31 +233,12 @@ function initMovingElements() {
 }
 
 function resize() {
+    _containerHeight = $( document ).height();
     _width = window.innerWidth;
-  _height = window.innerHeight;
-  _scrollHeight = _containerHeight-_height;
+    _height = window.innerHeight;
+    _scrollHeight = _containerHeight-_height;
+    $('.redContainer').height($( document ).height());
 }
-/*
-function updateElements() {
-  for (var i = 0; i < _movingElements.length; i++) {
-    var p = _positions[i];
-    if(_scrollPercent <= p.start[p.stage].percent) {
-      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.start[p.stage].x*_width)+'px, '+(p.start[p.stage].y*_containerHeight)+'px, 0px) rotate('+p.rotation+'deg)';
-    } else if(_scrollPercent >= p.end[p.stage].percent) {
-      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.end[p.stage].x*_width)+'px, '+(p.end[p.stage].y*_containerHeight)+'px, 0px) rotate('+p.rotation+'deg)';
-      if(p.stage+1 < p.start.length)
-      {
-        p.stage++;   
-        console.log(p.start[p.stage]);
-        console.log(p.end[p.stage]);       
-      }
-
-    } else {
-      _movingElements[i].style[_jsPrefix+'Transform'] = 'translate3d('+(p.start[p.stage].x*_width + (p.diff.x*(_scrollPercent-p.start[p.stage].percent)/p.diff.percent*_width))+'px, '+
-        (p.start[p.stage].y*_containerHeight + (p.diff.y*(_scrollPercent-p.start[p.stage].percent)/p.diff.percent*_containerHeight))+'px, 0px) rotate('+p.rotation+'deg)';
-    }
-  }
-}*/
 
 function updateElements() {
   for (var i = 0; i < _movingElements.length; i++) {

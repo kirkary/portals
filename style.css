@@ -39,7 +39,7 @@ background-repeat:repeat no-repeat;
     display: block;
     position: absolute;
     width: 100%;
-    height: 2565px;
+    height: 2595px;
     left: 0;
     top: 0;
     overflow: hidden;
@@ -163,7 +163,7 @@ h1,h2,h3{
 
 .section.trailer
 {
-    height: 600px;
+    /*height: 530px;*/
 }
 .container.trailer
 {
@@ -171,6 +171,7 @@ h1,h2,h3{
 }
 
 .section.description{
+    margin-top:100px;
     text-align: center;
     font-family: "CaviarDreams";    
     font-size: 3.4rem;
@@ -261,7 +262,7 @@ h1,h2,h3{
 
 .screenshots img
 {
-    height: 280px;
+    height: 300px;
     width:auto;
     margin: 0 auto;
     border: 4px solid #e9e9e9;
@@ -277,7 +278,7 @@ h1,h2,h3{
 }
 
 .screenshots figcaption{
-    max-width: 180px;
+    max-width: 195px;
     text-align: center;
     text-transform: uppercase;
     font-size:16px;
@@ -419,97 +420,77 @@ h1,h2,h3{
 
 /* Larger than mobile */
 @media (min-width: 400px) and (orientation:portrait) {
-.ast.ast4
-{ 
-    transform: scale(0.5);
-}
+    .trailerWrapper
+    {        
+        width: 422.9px;
+        height: 860px;
+    }
 
-.trailerWrapper
-{        
-    width: 422.9px;
-    height: 860px;
-}
-
-.section.head{
-min-height: 820px;
-}
-
-.section.head .container{
+    .section.head{
     min-height: 820px;
-}    
+    }
+
+    .section.head .container{
+        min-height: 820px;
+    }
+    .screenshots img{
+        height: 240px;
+    }    
+    
+    .screenshots figcaption {
+        max-width: 180px;
+    }
+    
 }
 
 /* Larger than phablet */
 @media (min-width: 550px) and (orientation:portrait) {
-.ast.ast4
-{ 
-    transform: scale(0.5);
-}
+    .trailerWrapper
+    {        
+        width: 422.9px;
+        height: 860px;
+    }
 
-.trailerWrapper
-{        
-    width: 422.9px;
-    height: 860px;
-}
+    .section.head{
+    min-height: 820px;
+    }
 
-.section.head{
-min-height: 820px;
-}
-
-.section.head .container{
-min-height: 820px;
-}    
+    .section.head .container{
+    min-height: 820px;
+    }    
 }
 
 @media (min-width: 400px) and (orientation:landscape) {
-    
-.head h1 
-{
-    padding-top: 75px;
-    font-size: 100px;
-}
+    .head h1 
+    {
+        padding-top: 75px;
+        font-size: 100px;
+    }
 
-.ast.ast4
-{ 
-    transform: scale(0.5);
-}
-
-.trailerWrapper
-{        
-    width: 260px;
-    height: 530px;
-}
+    .trailerWrapper
+    {        
+        width: 260px;
+        height: 530px;
+    }
 }
 
 /* Larger than phablet */
-@media (min-width: 550px) and (orientation:landscape){
-    
-.head h1 
-{
-padding-top: 75px;
-font-size: 100px;
-}
+@media (min-width: 550px) and (orientation:landscape){  
+    .head h1 
+    {
+    padding-top: 75px;
+    font-size: 100px;
+    }
 
-
-.ast.ast4
-{ 
-    transform: scale(0.5);
-}
-
-.trailerWrapper
-{        
-    width: 260px;
-    height: 530px;
-}
-    
+    .trailerWrapper
+    {        
+        width: 260px;
+        height: 530px;
+    }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) and (orientation:portrait) {
-.ast.ast4
-{ 
-    transform: scale(0.5);
-}
 
 .trailerWrapper
 {        
@@ -532,11 +513,6 @@ min-height: 820px;
     font-size: 100px;
 }
 
-.ast.ast4
-{ 
-    transform: scale(0.5);
-}
-
 .trailerWrapper
 {        
     width: 260px;
@@ -550,33 +526,6 @@ min-height: 820px;
     padding-top: 175px;
     }
 }
-
-/*.shipAppears
-{
-    overflow: hidden;
-    height: 180px;
-    width: 100%;
-    margin: 60px 0;
-    max-width: 100%;
-}
-
-.shipAppears .ship
-{
-    position: absolute;
-    right: 500px;
-}*/
-
-/*#headGreen .eye.l
-{
-    margin-top: 12%;
-    margin-left: 11%;
-}
-
-#headGreen .eye.r
-{
-    margin-top: 12%;
-    margin-left: 20%;
-}*/
 
 @font-face {
     font-family: CaviarDreams;
