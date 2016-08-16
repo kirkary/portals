@@ -163,6 +163,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 initPhotoSwipeFromDOM('.my-gallery');
 
 //MOVE ELEMENTS
+if (!/Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent))
+{
 var _containerHeight = $('.redContainer').height();
 var _width, _height, _scrollHeight;
 var letters = document.getElementsByTagName('span');
@@ -216,6 +218,7 @@ var _positions = [
 
 resize();
 initMovingElements();
+
 
 function initMovingElements() {
   for (var i = 0; i < _positions.length; i++) {
@@ -275,8 +278,7 @@ function loop() {
 }
 
 loop();
-
-window.addEventListener('resize', resize);
+window.addEventListener('resize', resize);    
 
 /* prefix detection http://davidwalsh.name/vendor-prefix */
 
@@ -295,5 +297,8 @@ function prefix() {
     js: pre[0].toUpperCase() + pre.substr(1)
   };
 }
-    
+}   
+else{
+    $('.redContainer').toggle();
+} 
 });
