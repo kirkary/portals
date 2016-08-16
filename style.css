@@ -80,8 +80,8 @@ h1,h2,h3{
 }
 
 .head h1{
-    padding-top: 120px;
-    font-size: 120px;
+    padding-top: 90px;
+    font-size: 110px;
 }
 
 .head h2{
@@ -419,17 +419,24 @@ h1,h2,h3{
 @media (min-width: 400px) and (orientation:portrait) {
     .section.head
     {
-        height: 600px;
+        height: 700px;
     }
 
     .section.head .container{
-        height: 600px;
+        height: 700px;
+    }
+    
+    .section.trailer
+    {
+        height: 900px;
     }
     
    .trailerWrapper
-    {        
+    {   /*     
         width: 422.9px;
-        height: 860px;
+        height: 860px;*/
+        width:90%;
+        height:auto;
     }
 
     .screenshots img{
@@ -511,13 +518,7 @@ h1,h2,h3{
     }  
 }*/
 
-@media (min-width: 960px) and (orientation:landscape) {
-    
-    .head h1 {
-        padding-top: 90px;
-        font-size:110px;
-    }
-    
+@media (min-width: 960px) and (orientation:landscape) {  
     .trailerWrapper
     {        
         height: 530px;
@@ -530,11 +531,7 @@ h1,h2,h3{
 }
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {
-    .head h1 {
-        padding-top: 175px;
-    }
-    
+@media (min-width: 1200px) {    
     .section.trailer
     {
         height: 530px;

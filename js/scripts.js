@@ -161,9 +161,13 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 };
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
-
+var mobileBrowser = false;
+if (/Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent) 
+    || window.matchMedia("only screen and (max-width: 768px)").matches)
+    mobileBrowser = true;
+    
 //MOVE ELEMENTS
-if (!/Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent) && !window.matchMedia("only screen and (max-width: 768px)"))
+if (!mobileBrowser)
 {
 var _containerHeight = $('.redContainer').height();
 var _width, _height, _scrollHeight;
