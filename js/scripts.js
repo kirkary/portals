@@ -163,7 +163,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 initPhotoSwipeFromDOM('.my-gallery');
 
 //MOVE ELEMENTS
-if (!/Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent))
+if (!/Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent) && !window.matchMedia("only screen and (max-width: 768px)"))
 {
 var _containerHeight = $('.redContainer').height();
 var _width, _height, _scrollHeight;
