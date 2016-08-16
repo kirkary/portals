@@ -432,11 +432,9 @@ h1,h2,h3{
     }
     
    .trailerWrapper
-    {   /*     
+    {       
         width: 422.9px;
-        height: 860px;*/
-        width:90%;
-        height:auto;
+        height: 860px;
     }
 
     .screenshots img{
