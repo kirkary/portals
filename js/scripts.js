@@ -299,6 +299,6 @@ function prefix() {
 }
 }   
 else{
-    $('.redContainer').toggle();
+    $('.redContainer').css('display','none');
 } 
 });
