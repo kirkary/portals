@@ -479,7 +479,7 @@ h1,h2,h3{
     min-height: 820px;
     }
 }*/
-
+/*
 @media (min-width: 960px) and (orientation:portrait) {
     
     .section.head
@@ -509,12 +509,13 @@ h1,h2,h3{
     {
         height:2566px;
     }  
-}
+}*/
 
 @media (min-width: 960px) and (orientation:landscape) {
     
     .head h1 {
-        padding-top: 175px;
+        padding-top: 90px;
+        font-size:110px;
     }
     
     .trailerWrapper
@@ -524,7 +525,7 @@ h1,h2,h3{
     
     .redContainer
     {
-        height:2586px;
+        height: 2302px;
     }    
 }
 
