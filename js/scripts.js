@@ -163,8 +163,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 initPhotoSwipeFromDOM('.my-gallery');
 
 //MOVE ELEMENTS
-var _containerHeight = $( document ).height();
-$('.redContainer').height($( document ).height());
+var _containerHeight = $('.redContainer').height();
 var _width, _height, _scrollHeight;
 var letters = document.getElementsByTagName('span');
 var _movingElements = [];
@@ -237,7 +236,6 @@ function resize() {
     _width = window.innerWidth;
     _height = window.innerHeight;
     _scrollHeight = _containerHeight-_height;
-    $('.redContainer').height($( document ).height());
 }
 
 function updateElements() {

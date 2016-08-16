@@ -161,10 +161,6 @@ h1,h2,h3{
     background-position: 0 36px;
 }
 
-.section.trailer
-{
-    /*height: 530px;*/
-}
 .container.trailer
 {
     overflow: hidden;
@@ -418,7 +414,7 @@ h1,h2,h3{
      100% { transform:scale(1.0); } 
      }
 
-/* Larger than mobile */
+/* Larger than mobile 
 @media (min-width: 400px) and (orientation:portrait) {
     .trailerWrapper
     {        
@@ -441,9 +437,9 @@ h1,h2,h3{
         max-width: 180px;
     }
     
-}
+}*/
 
-/* Larger than phablet */
+/* Larger than phablet 
 @media (min-width: 550px) and (orientation:portrait) {
     .trailerWrapper
     {        
@@ -458,72 +454,51 @@ h1,h2,h3{
     .section.head .container{
     min-height: 820px;
     }    
-}
+}*/
 
-@media (min-width: 400px) and (orientation:landscape) {
-    .head h1 
-    {
-        padding-top: 75px;
-        font-size: 100px;
-    }
 
-    .trailerWrapper
-    {        
-        width: 260px;
-        height: 530px;
-    }
-}
-
-/* Larger than phablet */
-@media (min-width: 550px) and (orientation:landscape){  
-    .head h1 
-    {
-    padding-top: 75px;
-    font-size: 100px;
-    }
-
-    .trailerWrapper
-    {        
-        width: 260px;
-        height: 530px;
-    }
-}
-
-/* Larger than tablet */
+/* Larger than tablet 
 @media (min-width: 750px) and (orientation:portrait) {
+    .trailerWrapper
+    {        
+        width: 422.9px;
+        height: 860px;
+    }
+    .section.head{
+    min-height: 820px;
+    }
 
-.trailerWrapper
-{        
-    width: 422.9px;
-    height: 860px;
-}
-.section.head{
-min-height: 820px;
-}
+    .section.head .container{
+    min-height: 820px;
+    }
+}*/
 
-.section.head .container{
-min-height: 820px;
-}
-}
-
-@media (min-width: 750px) and (orientation:landscape) {
-.head h1 
-{
-    padding-top: 75px;
-    font-size: 100px;
-}
-
-.trailerWrapper
-{        
-    width: 260px;
-    height: 530px;
-}
+@media (min-width: 1024px) and (orientation:landscape) {
+    
+    .head h1 {
+        padding-top: 175px;
+    }
+    
+    .trailerWrapper
+    {        
+        width: 260px;
+        height: 530px;
+    }
 }
 
 /* Larger than Desktop HD */
-@media (min-width: 1920px) {
+@media (min-width: 1200px) {
     .head h1 {
-    padding-top: 175px;
+        padding-top: 175px;
+    }
+    
+    .section.trailer
+    {
+        height: 530px;
+    }
+    
+    .redContainer{
+        height:2586px;
     }
 }
 
