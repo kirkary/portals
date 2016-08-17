@@ -347,15 +347,42 @@ h1,h2,h3{
     z-index: -1;   
 }*/
 
-.section.footer h4{
-    position: absolute;
+.section.head .menu{
+    position: fixed;
     width: 100%;
-    bottom: 0;
+    top: 0;
     z-index: 10;
     margin: 0;
     background-color: rgba(11, 86, 174, 0.3); /*rgba(6, 10, 45,0.8);*/
     background-position-y: 3px;
     background-repeat-y: no-repeat;
+}
+
+.section.head .menu ul{
+    display: table;
+    width: 960px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.section.head .menu ul li{
+    float: right;
+    margin:0;
+}
+
+.section.head .menu ul li a{
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: "CaviarDreams";
+    font-size: 24px;
+    color: #fcfcfc;
+}
+
+.section.head .menu ul li a.fb{
+    height: 28px;
+    width: 28px;
+    background-image: url('http://www.friendishapp.com/images/fbIcon4.png');
+    background-size: cover;
 }
 
 .section.footer .bhWrapper{
