@@ -351,11 +351,10 @@ h1,h2,h3{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     margin: 0;
     background-color: rgba(11, 86, 174, 0.3); /*rgba(6, 10, 45,0.8);*/
-    background-position-y: 3px;
-    background-repeat-y: no-repeat;
+    border-bottom: 1px solid rgba(72, 145, 231, 0.18);
 }
 
 .section.head .menu ul{
@@ -368,6 +367,15 @@ h1,h2,h3{
 .section.head .menu ul li{
     float: right;
     margin:0;
+    padding:0 5px;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+}
+
+.section.head .menu ul li:hover{
+    background-color: rgba(20, 166, 250, 0.85);
 }
 
 .section.head .menu ul li a{
@@ -379,10 +387,11 @@ h1,h2,h3{
 }
 
 .section.head .menu ul li a.fb{
-    height: 28px;
-    width: 28px;
-    background-image: url('http://www.friendishapp.com/images/fbIcon4.png');
-    background-size: cover;
+    display: block;
+    height: 38px;
+    width: 38px;
+    padding:0;
+    font-weight: bold;
 }
 
 .section.footer .bhWrapper{
@@ -450,6 +459,22 @@ h1,h2,h3{
 
     .section.head .container{
         height: 700px;
+    }
+    
+    .section.head .menu ul{
+        display: table;
+        width: 960px;
+        margin: 0 auto;
+        list-style-type: none;
+    }
+
+    .section.head .menu ul li a{
+        font-size: 32px;
+    }
+
+    .section.head .menu ul li a.fb{
+        height: 46px;
+        width: 46px;
     }
     
     .section.trailer
