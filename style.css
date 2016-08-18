@@ -500,6 +500,9 @@ h1,h2,h3{
     {
         height:2566px;
     }     
+    .pswp__caption__center{
+        font-size:20px;
+    }
 }
 
 /* Larger than phablet 
