@@ -165,7 +165,7 @@ var mobileBrowser = false;
 if (/Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Edge|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent) 
     || window.matchMedia("only screen and (max-width: 768px)").matches)
     mobileBrowser = true;
-    
+/*
 //MOVE ELEMENTS
 if (!mobileBrowser)
 {
@@ -283,7 +283,7 @@ function loop() {
 
 loop();
 window.addEventListener('resize', resize);    
-
+*/
 /* prefix detection http://davidwalsh.name/vendor-prefix */
 
 function prefix() {
@@ -301,8 +301,4 @@ function prefix() {
     js: pre[0].toUpperCase() + pre.substr(1)
   };
 }
-}   
-else{
-    $('.redContainer').css('display','none');
-} 
 });

@@ -83,6 +83,16 @@ h1,h2,h3{
     font-size: 110px;
 }
 
+.head .privacy h1{
+    font-size: 48px;
+}
+
+.head .privacy p
+{
+    font-size: 16px;
+    color:#fff;
+}
+
 .head h2{
     font-size: 30px;
 }
@@ -97,6 +107,10 @@ h1,h2,h3{
     position: relative;
     text-decoration: none;
     z-index: 10;
+}
+
+.head .privacy a{
+    display: block;
 }
 
 .head .storebutton
@@ -285,18 +299,6 @@ h1,h2,h3{
 .pswp__caption__center{
     text-align: center;
 }
-
-.screenshots .container .row:nth-child(odd) .screenshot img-wrapp{
-    /*float: left;
-    margin-left: 100px;*/
-}
-
-.screenshots .container .row:nth-child(even) .screenshot img-wrapp{ 
-    /*float: right;
-    margin-top: 350px;*/
-    /*margin-right: 100px;*/
-}
-
 
 .screenshot img.transition {
     -webkit-transform: scale(1.2); 
